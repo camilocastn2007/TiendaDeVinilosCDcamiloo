@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VinilosMilo — Tienda de Vinilos y CDs</title>
+  <meta name="description" content="VinilosMilo, tienda de discos en vinilo y CD: reggaetón, rock, salsa y música alternativa.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">VinilosMilo</div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#sugerencias">Sugerencias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>VinilosMilo — Música que se siente en las manos</h1>
+        <p>Vinilos y CDs originales de reggaetón, rock, salsa, música alternativa y muchos más géneros.</p>
+        <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+      </div>
+      
+     
+      <div id="discoDestacadoHero" class="disco-destacado" aria-live="polite">
+      </div>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+      <h2>Nuestro catálogo</h2>
+
+
+      <div class="controles-catalogo">
+        <label for="buscadorDiscos" class="sr-only">Buscar disco o artista</label>
+        <input type="search" id="buscadorDiscos" placeholder="Buscar por artista o álbum..." list="lista-discos-datalist">
+        <datalist id="lista-discos-datalist">
+       
+        </datalist>
+      </div>
+
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por género">
+        <button class="filtro-btn activo" data-genero="todos">Todos</button>
+        <button class="filtro-btn" data-genero="reggaeton">Reggaetón / Urbano</button>
+        <button class="filtro-btn" data-genero="rock-ingles">Rock en Inglés</button>
+        <button class="filtro-btn" data-genero="rock-pop-espanol">Rock y Pop en Español</button>
+        <button class="filtro-btn" data-genero="salsa">Salsa</button>
+        <button class="filtro-btn" data-genero="alternativa">Música Alternativa</button>
+      </div>
+
+      <div class="grid-discos" id="gridDiscos">
+    
+      </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+      <h2>Sobre VinilosMilo</h2>
+      <p>Somos una tienda independiente en Apartadó y Medellín dedicada a los coleccionistas y amantes de la música física, ofreciendo una selección cuidadosa que va desde los clásicos de la salsa hasta los últimos lanzamientos del género urbano.</p>
+    </section>
+
+    <section id="sugerencias" class="sugerencias">
+      <h2>¿No encuentras lo que buscas? Sugiérelo</h2>
+      <p>Déjanos tus datos y qué vinilo o CD te gustaría que trajéramos en nuestro próximo pedido.</p>
+      
+      <form id="formSugerencia" novalidate>
+        <div class="campo">
+          <label for="nombre">Tu nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3">
+          <span class="error" id="errorNombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="email">Tu correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error" id="errorEmail"></span>
+        </div>
+
+        <div class="campo">
+          <label for="discoSugerido">Artista y Álbum que sugieres</label>
+          <input type="text" id="discoSugerido" name="discoSugerido" required minlength="5" placeholder="Ej: Feid - Feliz Cumpleaños Ferxxo">
+          <span class="error" id="errorDiscoSugerido"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar sugerencia</button>
+        <p class="mensaje-exito" id="mensajeExito" hidden>¡Gracias! Hemos anotado tu sugerencia.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contenedor">
+      <div class="footer-columna">
+        <h3>VinilosMilo</h3>
+        <p>Tu tienda de música física en Apartadó y Medellín, Antioquia.</p>
+      </div>
+      <div class="footer-columna">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#sugerencias">Sugerir Disco</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 VinilosMilo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="data/discos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
