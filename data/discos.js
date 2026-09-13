@@ -3,7 +3,7 @@
 const catalogoDiscos = [
   // --- URBANO ---
   { id: "u1", artista: "Quevedo", titulo: "Buenas Noches", genero: "reggaeton", precio: 145000, imagen: "img/discos/Urbano/BUENASNOCHES.jpg" },
-  { id: "u2", artista: "Post Malone / Swae Lee", titulo: "Girasoles", genero: "reggaeton", precio: 155000, imagen: "img/discos/Urbano/GIRASOLES.jpg" },
+  { id: "u2", artista: "Jhay Wheeler", titulo: "Girasoles", genero: "reggaeton", precio: 155000, imagen: "img/discos/Urbano/GIRASOLES.jpg" },
   { id: "u3", artista: "Feid", titulo: "Intershibuya", genero: "reggaeton", precio: 160000, imagen: "img/discos/Urbano/INTERSHIBUYA.jpg" },
   { id: "u4", artista: "Omar Courtz", titulo: "Mi Primera Musa", genero: "reggaeton", precio: 135000, imagen: "img/discos/Urbano/MIPRIMERAMUSA.jpg" },
   { id: "u5", artista: "Mora", titulo: "Paraíso", genero: "reggaeton", precio: 150000, imagen: "img/discos/Urbano/PARAISO Mora.jpg" },
